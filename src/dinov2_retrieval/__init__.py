@@ -59,7 +59,7 @@ def main():
         "--margin",
         type=int,
         default=10,
-        choices=range(0, 100),
+        choices=range(0, 105, 5),
         help="margin size (in pixel) between concatenated images",
     )
     parser.add_argument(

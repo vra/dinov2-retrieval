@@ -56,6 +56,8 @@ dinov2_retrieval -q /path/to/query/image -d /path/to/database
 ```
 NOTE: both of them can be path to an image or a folder.
 
+The results will be saved to `output` folder.
+
 ### Debug info
 add `-v` or `--verbose` to show debug info
 

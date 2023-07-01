@@ -31,12 +31,14 @@ def main():
         "-q",
         "--query",
         type=str,
+        required=True,
         help="path to a query image file or image folder",
     )
     parser.add_argument(
         "-d",
         "--database",
         type=str,
+        required=True,
         help="path to the database image file or image folder",
     )
     parser.add_argument(

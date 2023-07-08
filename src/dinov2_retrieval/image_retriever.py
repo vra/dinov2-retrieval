@@ -9,7 +9,7 @@ import numpy as np
 import PIL
 from PIL import Image, ImageOps
 import torch
-from torchvision import models, transforms
+from torchvision import transforms
 from tqdm import tqdm
 
 
@@ -54,7 +54,7 @@ class ImageRetriver:
             sys.exit(1)
         except http.client.RemoteDisconnected:
             logger.error(
-                f"connect to github is reset. maybe set --model-path to $HOME/.cache/torch/hub/facebookresearch_dinov2_main ?"
+                "connect to github is reset. maybe set --model-path to $HOME/.cache/torch/hub/facebookresearch_dinov2_main ?"
             )
             sys.exit(1)
 
@@ -117,13 +117,13 @@ class ImageRetriver:
         logger.debug(f"query image paths: {list(query_paths)}")
 
         if len(query_paths) < 1:
-            logger.warning(f"no query image, exit")
+            logger.warning("no query image, exit")
             return
 
         database_img_paths = self.glob_images(Path(args.database))
 
         if len(database_img_paths) < 1:
-            logger.warning(f"database does not contain images, exit")
+            logger.warning("database does not contain images, exit")
             return
 
         # set top_k to valid range

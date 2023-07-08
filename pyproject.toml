@@ -18,10 +18,12 @@ classifiers = [
 ]
 dependencies = [
 "appdirs",
-"torch",
-"pillow",
-"numpy",
 "loguru",
+"numpy",
+"pillow",
+"torch",
+"torchvision",
+"tqdm",
 ]
 
 [project.scripts]

@@ -1,11 +1,13 @@
 from collections import namedtuple
+import os
 from pathlib import Path
 import sys
 
 import pytest
 
-sys.path.insert(0, "..")
-from src.dinov2_retrieval.image_retriever import ImageRetriver
+src_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "src")
+sys.path.insert(0, src_dir)
+from dinov2_retrieval.image_retriever import ImageRetriver
 
 
 def test_init():
